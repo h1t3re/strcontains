@@ -34,10 +34,10 @@ int strcontains(const char *str1, const char *str2)
 	if(strlen_array1 > strlen_array2)
 	{
 		printf("%c\n", *(array2 + i));
-		while(*(array2 + i) != '\0')
+		while(*(array1 + i) != '\0')
 		{
 			j = 0;
-			while((*(array1 + i + j) == (*(array2 + i + j))) & (*(array2 + i) != '\0'))
+			while((*(array1 + i + j) == (*(array2 + j))) & (*(array2 + j) != '\0'))
 			{
 				printf("%c\n", *(array2 + i + j));
 				j = j + 1;
