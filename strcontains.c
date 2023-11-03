@@ -30,20 +30,19 @@ int strcontains(const char *str1, const char *str2)
 		*(array2 + i)	= *(str2 + i);
 		i = i +1;
 	}
-	i = 0;	
+	i = 0;
 	if(strlen_array1 > strlen_array2)
 	{
-		printf("%c\n", *(array2 + i));
 		while(*(array1 + i) != '\0')
 		{
 			j = 0;
 			while((*(array1 + i + j) == (*(array2 + j))) & (*(array2 + j) != '\0'))
 			{
-				printf("%c\n", *(array2 + i + j));
+				printf("%c\n", *(array1 + i));
 				j = j + 1;
-				if(j+1 == strlen_array2)
-					return 0;
 			}
+			if(j == strlen_array2)
+				return 0;
 			i = i +1;
 		}
 	}
@@ -52,9 +51,9 @@ int strcontains(const char *str1, const char *str2)
 
 int main()
 {
-	char *string0 = "4\0";
+	char *string0 = "44\0";
 	char *string1 = "a\0";
-	char *string2 = "0123456789\0";
+	char *string2 = "00 11 22 33 44 55 66 77 88 99\0";
 	printf("%d\n", strcontains(string2, string0));
 	printf("%d\n", strcontains(string2, string1));
 	return 0;
