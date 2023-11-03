@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "../../include/strlen.h"
-
+#include <stdio.h>
 
 int strcontains(const char *str1, const char *str2)
 {
@@ -37,9 +37,7 @@ int strcontains(const char *str1, const char *str2)
 		{
 			j = 0;
 			while((*(array1 + i + j) == (*(array2 + j))) & (*(array2 + j) != '\0'))
-			{
 				j = j + 1;
-			}
 			if(j == strlen_array2)
 				return 0;
 			i = i +1;
@@ -50,9 +48,7 @@ int strcontains(const char *str1, const char *str2)
 		{
 			j = 0;
 			while((*(array2 + i + j) == (*(array1 + j))) & (*(array1 + j) != '\0'))
-			{
 				j = j + 1;
-			}
 			if(j == strlen_array1)
 				return 0;
 			i = i +1;
